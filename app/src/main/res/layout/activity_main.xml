@@ -123,6 +123,14 @@
             android:onClick="scoreTrendView"
             android:text="ScoreTrendViewActivity"
             android:textAllCaps="false"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sportView"
+            android:text="SportViewActivity"
+            android:textAllCaps="false"/>
+
+
 
     </LinearLayout>
 

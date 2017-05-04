@@ -74,7 +74,7 @@ public class BrokenLineTrendViewActivity extends AppCompatActivity {
         data.mXLineDataList = Arrays.asList(mDefaultHorizontalText);
         data.mDimensionList = mDataList;
         data.mSelectColor = getResources().getColor(R.color.colorAccent);
-
+        mBrokenLineTrendView.setDottedLineColor(getResources().getColor(R.color.color_02_point));
         mBrokenLineTrendView.setBrokenLineTrendData(data);
         mBrokenLineTrendView.setOnItemClick(new BrokenLineTrendView.OnItemClick() {
             @Override
@@ -92,5 +92,6 @@ public class BrokenLineTrendViewActivity extends AppCompatActivity {
                 Toast.makeText(BrokenLineTrendViewActivity.this,msg,Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 }

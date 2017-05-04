@@ -45,9 +45,11 @@
             android:name=".RoundIndicatorViewActivity"
             android:hardwareAccelerated="false">
         </activity>
-        <activity android:name=".BrokenLineTrendViewActivity"
+        <activity
+            android:name=".BrokenLineTrendViewActivity"
             android:screenOrientation="landscape">
-
+        </activity>
+        <activity android:name=".SportViewActivity">
         </activity>
     </application>
 

@@ -94,4 +94,12 @@
         <attr name="trend_view_color_text" format="color"/>
         <attr name="trend_view_text_size" format="dimension"/>
     </declare-styleable>
+
+
+    <declare-styleable name="ScoreView">
+        <attr name="sportView_text_size" format="dimension"/>
+        <attr name="sportView_text_color" format="color"/>
+        <attr name="sportView_in_circle_color" format="color"/>
+        <attr name="sportView_out_circle_color" format="color"/>
+    </declare-styleable>
 </resources>

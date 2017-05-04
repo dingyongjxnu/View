@@ -247,6 +247,7 @@ public class BrokenLineTrendView extends View {
         int count = mYLineDataList.size();
         if (count > 0) {
             canvas.save();
+            mDottedPaint.setColor(mDottedLineColor);
             mDottedPaint.setPathEffect(new DashPathEffect(new float[]{20, 10}, 4));
             mDottedPaint.setStrokeWidth(1f);
             float height = mYHeight - mBottomPadding;
@@ -487,6 +488,7 @@ public class BrokenLineTrendView extends View {
         int width = oneWidth * size + totalPadding;//一个item的总长度
         int x = (int) (mWith - width) / 2;//确定开始是坐标位置
         int y = mTopPadding;
+        mTextPaint.setColor(mTexColor);
         for (int i = 0; i < size; i++) {
             BrokenLineDimension dimension = mDataList.get(i);
             mRemarkPaint.setColor(dimension.mBrokenLineColor);
@@ -603,7 +605,7 @@ public class BrokenLineTrendView extends View {
         mMaxYPoint = getMaxY();
         mMinYPoint = getMinY();
 
-        invalidate();
+        //invalidate();
     }
 
     private double getMaxY() {
