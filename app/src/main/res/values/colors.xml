@@ -16,4 +16,8 @@
 
     <color name="color_text">#000000</color>
     <color name="color_dotted_line">#222222</color>
+
+
+    <color name="color_ccc">#CCC</color>
+    <color name="color_63B8FF">#63B8FF</color>
 </resources>

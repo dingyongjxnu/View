@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BrokenLineTrendViewActivity.class);
         startActivity(intent);
     }
+    public void scoreView(View viw){
+        Intent intent = new Intent(this, ScoreViewActivity.class);
+        startActivity(intent);
+    }
+
     public void sportView(View viw){
         Intent intent = new Intent(this, SportViewActivity.class);
         startActivity(intent);

@@ -49,6 +49,8 @@
             android:name=".BrokenLineTrendViewActivity"
             android:screenOrientation="landscape">
         </activity>
+        <activity android:name=".ScoreViewActivity">
+        </activity>
         <activity android:name=".SportViewActivity">
         </activity>
     </application>
