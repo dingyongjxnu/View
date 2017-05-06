@@ -176,7 +176,7 @@ public class SportView extends View {
 
         canvas.drawText(textMing, mCenterX + rankRect.width() / 2 + DensityUtil.dip2px(getContext(), 8), mCenterY + mArcRadius + rankRect.height() / 2, mTextPaint);
 
-        String textTime = "截止" + getTime() + "已走";
+        String textTime = "截止" + getCurrentHoseTime() + "已走";
         Rect timeRect = new Rect();
         mTextPaint.getTextBounds(textTime, 0, textTime.length(), timeRect);
         canvas.drawText(textTime, mCenterX - timeRect.width() / 2, mCenterY - mArcRadius / 2 + timeRect.height() / 2, mTextPaint);
@@ -198,26 +198,37 @@ public class SportView extends View {
         mTextPaint.getTextBounds(textAverage, 0, textAverage.length(), averageRect);
         canvas.drawText(textAverage, mBgWidth - DensityUtil.dip2px(getContext(), 20) - averageRect.width(), mCenterY * 2 + averageRect.height() / 2, mTextPaint);
         canvas.restore();
+
+
+
+
     }
 
 
+    /**
+     * 绘制中间的虚线
+     * @param canvas canvas
+     */
     private void drawDottedLine(Canvas canvas) {
         canvas.save();
         mDottedLinePaint.setColor(mArcLineColor);
         mDottedLinePaint.setStrokeWidth(DensityUtil.dip2px(getContext(), 2f));
         mDottedLinePaint.setStyle(Paint.Style.STROKE);
         Path path = new Path();
-
+        //mCenterY * 2 向下偏移40dp
         path.moveTo(DensityUtil.dip2px(getContext(), 20), mCenterY * 2 + DensityUtil.dip2px(getContext(), 40));
         path.lineTo(mBgWidth - DensityUtil.dip2px(getContext(), 20), mCenterY * 2 + DensityUtil.dip2px(getContext(), 40));
-
-        mDottedLinePaint.setPathEffect(new DashPathEffect(new float[]{5, 5}, 1));
-
+        //设置虚线
+        mDottedLinePaint.setPathEffect(new DashPathEffect(new float[]{ 5, 5}, 1));
         canvas.drawPath(path, mDottedLinePaint);
         canvas.restore();
     }
 
-    private String getTime() {
+    /**
+     * 得到当前的时间 格式为 HH:mm
+     * @return currentTime str
+     */
+    private String getCurrentHoseTime() {
         SimpleDateFormat format = new SimpleDateFormat("HH:mm");
         return format.format(new Date(System.currentTimeMillis()));
     }
